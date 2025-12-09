@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: t01
+  namespace: djp75990
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io/background
+    - resources-finalizer.argocd.argoproj.io/foreground
+spec:
+  project: djp75990
+  destination:
+    name: argus
+    namespace: djp75990
+  source:
+    path: apps
+    repoURL: https://github.com/huywork/t01-deployment
+    targetRevision: main
+    helm:
+      version: v3
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
