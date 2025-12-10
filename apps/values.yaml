@@ -26,7 +26,6 @@ services:
   #     enabled: set to false to stop a service
   t01-epics-pvcs:
   t01-epics-opis:
-  t01-epics-gateways:
   bl01t-mo-sim-01:
     enabled: true
     targetRevision: main
