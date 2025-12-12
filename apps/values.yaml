@@ -32,4 +32,4 @@ services:
     targetRevision: main
   bl01t-di-cam-01:
     enabled: true
-    targetRevision: detector-changes
+    targetRevision: 2025.12.12
